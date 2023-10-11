@@ -68,7 +68,7 @@ function App() {
   };
 
   return (
-    <main className="h-screen px-5 w-screen font-inter" style={{ backgroundColor: '#181b20' }}>
+    <main className="h-screen px-5 w-screen font-inter overflow-hidden" style={{ backgroundColor: '#181b20' }}>
       <Header />
       {showWelcome && loading && !hasFetchedInitially ? <WelcomeContainer /> : null}
       {loading && hasFetchedInitially ? <Loading /> : null}
