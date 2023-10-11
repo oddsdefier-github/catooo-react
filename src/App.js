@@ -58,7 +58,7 @@ function App() {
   };
 
   return (
-    <main className="h-screen w-screen bg-gray-white font-inter">
+    <main className="h-screen w-screen font-inter" style={{ backgroundColor: '#181b20' }}>
       <Header />
       {loading && !hasFetchedInitially ? <WelcomeContainer /> : null}
       {loading && hasFetchedInitially ? <Loading /> : null}
@@ -71,7 +71,7 @@ function App() {
 function Header() {
   return (
     <header className="h-[10%] w-screen flex justify-between items-center px-10">
-      <h1 className="font-bold text-3xl lg:text-5xl text-gray-400">
+      <h1 className="font-bold text-3xl lg:text-5xl" style={{ color: '#39FF14' }}>
         catooo
         <span className="text-6xl font-extrabold text-indigo-600">.</span>
       </h1>
@@ -107,7 +107,7 @@ function CatImage({ url }) {
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
           </svg>}
         </a>
-        <div className="max-w-sm bg-white">
+        <div className="max-w-sm bg-transparent">
           <img className="cat-img rounded-t-lg" src={url} alt="Random Cat" />
         </div>
       </div>
@@ -120,7 +120,7 @@ function WelcomeContainer() {
   return (
     <section className="h-[70%] w-full grid place-items-center">
       <div className="welcome-container w-72">
-        <div className="max-w-sm bg-white flex items-center justify-center h-72">
+        <div className="max-w-sm flex items-center justify-center h-72">
           <h1 className="text-8xl font-bold leading-3 text-indigo-700">
             random cat
             <span className="text-pink-600 text-9xl">.</span>
