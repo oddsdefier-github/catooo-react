@@ -81,7 +81,7 @@ function App() {
 
 function Header() {
   return (
-    <header className="h-[10%] w-screen flex justify-between items-center px-10">
+    <header className="h-[10%] w-screen flex justify-between items-center px-5">
       <h1 className="font-bold text-2xl lg:text-5xl" style={{ color: '#39FF14' }}>
         catooo
         <span className="text-4xl font-extrabold text-indigo-600">.</span>
@@ -131,13 +131,13 @@ function WelcomeContainer() {
   return (
     <section className="h-[70%] w-full grid place-items-center animate-pulse">
       <div className="welcome-container w-72">
-        <div className="max-w-sm flex items-center justify-center h-72">
+        <div className="max-w-sm flex flex-col justify-center items-center gap-2 h-72">
           <h1 className="text-8xl font-bold leading-3 text-indigo-600">
             random cat
             <span className="text-pink-500 text-9xl">.</span>
           </h1>
-          <h5 className="text-gray-500 font-bold">
-            jeffry paner
+          <h5 className="text-gray-600 font-semibold">
+            © jeffry-paner 2023
           </h5>
         </div>
       </div>
