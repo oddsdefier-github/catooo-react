@@ -10,6 +10,16 @@ function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [hasFetchedInitially, setHasFetchedInitially] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(true);
+
+  useEffect(() => {
+    if (!hasFetchedInitially) {
+      const timer = setTimeout(() => {
+        setShowWelcome(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [hasFetchedInitially]);
 
 
   useEffect(() => {
@@ -60,6 +70,7 @@ function App() {
   return (
     <main className="h-screen w-screen font-inter" style={{ backgroundColor: '#181b20' }}>
       <Header />
+      {showWelcome ? <WelcomeContainer /> : null}
       {loading && !hasFetchedInitially ? <WelcomeContainer /> : null}
       {loading && hasFetchedInitially ? <Loading /> : null}
       {!loading ? <CatImage url={catImages[currentImageIndex]} /> : null}
@@ -118,13 +129,16 @@ function CatImage({ url }) {
 
 function WelcomeContainer() {
   return (
-    <section className="h-[70%] w-full grid place-items-center">
+    <section className="h-[70%] w-full grid place-items-center animate-pulse">
       <div className="welcome-container w-72">
         <div className="max-w-sm flex items-center justify-center h-72">
-          <h1 className="text-8xl font-bold leading-3 text-indigo-700">
+          <h1 className="text-8xl font-bold leading-3 text-indigo-600">
             random cat
-            <span className="text-pink-600 text-9xl">.</span>
+            <span className="text-pink-500 text-9xl">.</span>
           </h1>
+          <h5 className="text-gray-500 font-bold">
+            jeffry paner
+          </h5>
         </div>
       </div>
     </section>
