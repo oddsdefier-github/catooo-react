@@ -68,7 +68,7 @@ function App() {
   };
 
   return (
-    <main className="h-screen w-screen font-inter" style={{ backgroundColor: '#181b20' }}>
+    <main className="h-screen px-5 w-screen font-inter" style={{ backgroundColor: '#181b20' }}>
       <Header />
       {showWelcome ? <WelcomeContainer /> : null}
       {loading && !hasFetchedInitially ? <WelcomeContainer /> : null}
@@ -136,7 +136,7 @@ function WelcomeContainer() {
             random cat
             <span className="text-pink-500 text-9xl">.</span>
           </h1>
-          <h5 className="text-gray-600 font-semibold">
+          <h5 className="text-gray-600 text-sm">
             © jeffry-paner 2023
           </h5>
         </div>
