@@ -70,8 +70,7 @@ function App() {
   return (
     <main className="h-screen px-5 w-screen font-inter" style={{ backgroundColor: '#181b20' }}>
       <Header />
-      {showWelcome ? <WelcomeContainer /> : null}
-      {loading && !hasFetchedInitially ? <WelcomeContainer /> : null}
+      {showWelcome && loading && !hasFetchedInitially ? <WelcomeContainer /> : null}
       {loading && hasFetchedInitially ? <Loading /> : null}
       {!loading ? <CatImage url={catImages[currentImageIndex]} /> : null}
       <FetchButton showNextCatImage={showNextCatImage} />
@@ -81,7 +80,7 @@ function App() {
 
 function Header() {
   return (
-    <header className="h-[10%] w-screen flex justify-between items-center px-5">
+    <header className="h-[10%] w-screen flex justify-between items-center">
       <h1 className="font-bold text-2xl lg:text-5xl" style={{ color: '#39FF14' }}>
         catooo
         <span className="text-4xl font-extrabold text-indigo-600">.</span>
