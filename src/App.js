@@ -71,9 +71,9 @@ function App() {
 function Header() {
   return (
     <header className="h-[10%] w-screen flex justify-between items-center px-10">
-      <h1 className="font-bold text-3xl lg:text-5xl" style={{ color: '#39FF14' }}>
+      <h1 className="font-bold text-2xl lg:text-5xl" style={{ color: '#39FF14' }}>
         catooo
-        <span className="text-6xl font-extrabold text-indigo-600">.</span>
+        <span className="text-4xl font-extrabold text-indigo-600">.</span>
       </h1>
     </header>
   );
