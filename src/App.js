@@ -16,7 +16,7 @@ function App() {
     if (!hasFetchedInitially) {
       const timer = setTimeout(() => {
         setShowWelcome(false);
-      }, 3000);
+      }, 3500);
       return () => clearTimeout(timer);
     }
   }, [hasFetchedInitially]);
@@ -43,7 +43,6 @@ function App() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-
       const data = await response.json();
       const urls = data.map(img => img.url);
       setCatImages(urls);
